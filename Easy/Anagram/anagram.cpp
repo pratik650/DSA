@@ -8,25 +8,30 @@ class Solution
 {
     public:
     //Function is to check whether two strings are anagram of each other or not.
-    bool isAnagram(string s, string t){
+    bool isAnagram(string a, string b){
         
-        int count=0;
-        if(s.size()!=t.size()) return false;
+        if(a.size()!=b.size()) return false;
         
-        for(int i=0;i<s.size();i++){
-            
-            for(int j=0;j<s.size();j++){
-                if(s[i]==t[j]){
-                     t.erase(t.begin() + j);
-                     break;
-                }
-               
-            }
+        unordered_map<char,int> Map1;
+        unordered_map<char,int> Map2;
+        
+        
+        for(auto it:a){
+            Map1[it]++;
+        }
+        for(auto it:b){
+            Map2[it]++;
+        }
+        for (const auto& pair : Map1) {
+        char key = pair.first;
+        int value = pair.second;
+
+        if (Map2.find(key) == Map2.end() || Map2[key] != value) {
+            return false;
+        }
         }
         
-        if(t.size()==0 && count ==0 ) return true;
-        
-        return false;
+        return true;
         
         
     }
