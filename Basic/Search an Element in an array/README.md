@@ -1,4 +1,4 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/search-an-element-in-an-array-1587115621/1?page=1&sprint=ca8ae412173dbd8346c26a0295d098fd&sortBy=submissions">Search an Element in an array</a></h2><h3>Difficulty Level : Basic</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an integer array and another integer element. The task is to find if the given element is present in array or not.</span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/search-an-element-in-an-array-1587115621/0">Search an Element in an array</a></h2><h3>Difficulty Level : Basic</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an integer array and another integer element. The task is to find if the given element is present in array or not.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
