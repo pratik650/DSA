@@ -1,44 +1,49 @@
 //{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
 
-pair<long long, long long> getMinMax(long long a[], int n) ;
+
+// } Driver Code Ends
+class Solution {
+public:
+    pair<long long, long long> getMinMax(long long arr[], int n) {
+       pair<long long, long long> ans;
+
+       long long min_val = INT_MAX;
+       long long max_val = INT_MIN;
+       for (int i = 0; i < n; i++) {
+           if (arr[i] < min_val) {
+               min_val = arr[i];
+           }
+           if (arr[i] > max_val) {
+               max_val = arr[i];
+           }
+        }
+        
+        ans.first = min_val;
+        ans.second = max_val;
+        
+        return ans;
+    }
+};
+
+//{ Driver Code Starts.
 
 int main() {
     int t;
     cin >> t;
-    while (t--) {
+    while (t--) 
+    {
         int n;
         cin >> n;
-        ll a[n];
+        long long a[n];
         for (int i = 0; i < n; i++) cin >> a[i];
-
-        pair<ll, ll> pp = getMinMax(a, n);
-
+        
+        Solution ob;
+        pair<long long, long long> pp = ob.getMinMax(a, n);
+        
         cout << pp.first << " " << pp.second << endl;
     }
     return 0;
 }
 // } Driver Code Ends
-
-
-pair<long long, long long> getMinMax(long long a[], int n) {
-    pair<long long, long long> answer;
-    int min=a[0];
-    int max=a[0];
-    answer.first = min;
-    answer.second = max;
-    
-    for(int i=1;i<n;i++){
-        if(min>a[i]){
-            min = a[i];
-            answer.first = min;
-        }
-        if(max<a[i]){
-            max = a[i];
-            answer.second = max;
-        }
-    }
-    return answer;
-}
